@@ -1,0 +1,66 @@
+@use "sass:color";
+
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$text-color:#333;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+}
+
+main{
+    padding: 20px 0;
+  }
+  
+   h1 {
+       color: $primary-color;
+   }
+   .my-btn{
+       padding: 10px;
+       border-radius: 8px;
+       background-color: $primary-color;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+       &:hover{
+        background-color: color.adjust($primary-color, $lightness: 10%);
+    
+       }
+   }
+  
+   .box{
+      background-color: $secondary-color;
+      padding: 10px;
+      margin-top: 10px;
+      color: #fff;
+   }
+   .show{
+      display: block;
+   }
+   .hidden{
+      display: none;
+   }
+  
+   footer {
+       text-align: center;
+       padding: 20px 0;
+       background-color: #f4f4f4;
+   }
