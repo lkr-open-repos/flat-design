@@ -31,8 +31,8 @@ function scssTask() {
 function jsTask() {
   return (
     src(files.jsPath, { sourcemaps: true })
-      // .pipe(concat('all.js'))
-      .pipe(uglify())
+      .pipe(concat("all.js"))
+      // .pipe(uglify())
       .pipe(dest("dist/js", { sourcemaps: "." }))
   );
 }
