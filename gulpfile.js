@@ -4,7 +4,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const concat = require("gulp-concat");
-// const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify");
 const purgecss = require("gulp-purgecss");
 const browserSync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
@@ -29,12 +29,10 @@ function scssTask() {
 
 // JavaScript Task
 function jsTask() {
-  return (
-    src(files.jsPath, { sourcemaps: true })
-      .pipe(concat("all.js"))
-      // .pipe(uglify())
-      .pipe(dest("dist/js", { sourcemaps: "." }))
-  );
+  return src(files.jsPath, { sourcemaps: true })
+    .pipe(concat("all.js"))
+    .pipe(uglify())
+    .pipe(dest("dist/js", { sourcemaps: "." }));
 }
 
 // HTML Task
