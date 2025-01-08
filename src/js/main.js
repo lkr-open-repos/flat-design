@@ -192,9 +192,8 @@ class TestimonialCarousel {
     });
   }
 }
-// Initialize
+
 document.addEventListener("DOMContentLoaded", () => {
   const headerSection = new StickyHeader("header.section", 400);
-
   const testimonialCarousel = new TestimonialCarousel();
 });
