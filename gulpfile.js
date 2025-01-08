@@ -60,7 +60,7 @@ function htmlTask() {
 
 // Copy Assets Task
 function copyAssets() {
-    return src(files.assetPath)
+    return src(files.assetPath, {encoding: false})
         .pipe(dest('dist/assets'));
 }
 

@@ -1,0 +1,57 @@
+@use "abstracts/variables" as v;
+
+html {
+  font-size: 16px;
+
+  @media (min-width: 576px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 21px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: v.$text-primary;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  color: v.$text-primary;
+}
+
+p,
+ul,
+ol,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: "Nunito Sans", sans-serif;
+  color: v.$text-primary;
+}
+
+.navigation a,
+.button-primary {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: v.$text-primary;
+}

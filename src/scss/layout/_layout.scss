@@ -1,0 +1,49 @@
+@use "abstracts/variables";
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$container-margin-xs: 1rem;
+$container-margin-sm: 2rem;
+$container-margin-md: 4rem;
+$container-margin-lg: 6rem;
+$container-margin-xl: 8rem;
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  margin-left: $container-margin-xs;
+  margin-right: $container-margin-xs;
+
+  @media (min-width: $sm) {
+    margin-left: $container-margin-sm;
+    margin-right: $container-margin-sm;
+  }
+
+  @media (min-width: $md) {
+    margin-left: $container-margin-md;
+    margin-right: $container-margin-md;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
