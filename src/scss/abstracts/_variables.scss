@@ -1,7 +1,12 @@
+@use "sass:color";
+
 $primary-color: #343a40;
 $secondary-color: #e9ecef;
 $accent-color-1: #dc3545;
 $accent-color-2: #ffffff;
+
+$even-card-bg: color.adjust($accent-color-1, $lightness: 5%);
+$even-card-text: color.adjust($accent-color-2, $lightness: -10%);
 
 $text-primary: $primary-color;
 $background-light: $secondary-color;
